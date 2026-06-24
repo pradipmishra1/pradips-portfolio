@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pradip Mishra — Designer & Developer</title>
+<meta name="description" content="Pradip Mishra — Graphic Designer & Web Developer from Nepal. Logo design, YouTube thumbnails, websites, posters and more.">
+<meta property="og:title" content="Pradip Mishra — Designer & Developer">
+<meta property="og:description" content="Graphic designer & web developer from Nepal crafting bold visuals and stunning websites.">
+<meta name="theme-color" content="#13183B">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="sr-announcer" class="sr-only" role="status" aria-live="polite"></div>
+
+<button id="btt" aria-label="Back to top">↑</button>
+
+<!-- NAV -->
+<nav class="topbar" id="nav">
+  <a href="#" class="brand"><span class="brand-mark">PM</span>Pradip Mishra</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#" id="nav-whatsapp" target="_blank" rel="noopener" class="nav-cta">Hire Me →</a>
+  <button class="mbtn" id="mbtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mmenu">
+  <a href="#services" data-close-menu>Services</a>
+  <a href="#work" data-close-menu>Work</a>
+  <a href="#about" data-close-menu>About</a>
+  <a href="#pricing" data-close-menu>Pricing</a>
+  <a href="#contact" data-close-menu>Contact</a>
+  <a href="#" id="mnav-whatsapp" target="_blank" rel="noopener" class="m-cta">Hire Me →</a>
+</div>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="rv-load">
+          <div class="hero-eyebrow"><span class="dot"></span>Available for freelance work</div>
+          <h1 class="hero-h1">
+            Hello there, I'm <span class="accent">Pradip</span> Mishra<br>
+            Designer & Developer<br>based in Nepal.
+          </h1>
+          <p class="hero-desc" id="hero-desc">I'm Pradip — a graphic designer & web developer from Nepal crafting bold visuals, stunning websites, and click-worthy thumbnails that get results.</p>
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary">View Work →</a>
+            <a href="#contact" class="btn-ghost">Let's Talk</a>
+          </div>
+          <div class="hero-stats">
+            <div><b class="h-stat-val" data-count="48">0</b><span class="h-stat-lbl">Projects</span></div>
+            <div><b class="h-stat-val" data-count="24">0</b><span class="h-stat-lbl">Clients</span></div>
+            <div><b class="h-stat-val" id="stat-earned">$2.5k</b><span class="h-stat-lbl">Earned</span></div>
+          </div>
+        </div>
+        <div class="hero-portrait-wrap rv-load">
+          <div class="hero-portrait-blob" aria-hidden="true"></div>
+          <div class="hero-portrait">
+            <img src="/images/mphoto.jpg" alt="Pradip Mishra" id="hero-photo" onerror="this.style.display='none';document.getElementById('hero-photo-fallback').style.display='flex'">
+            <div class="hero-portrait-fallback" id="hero-photo-fallback" style="display:none;">🧑‍💻</div>
+          </div>
+          <div class="hero-badge hero-badge-top"><span class="hero-badge-ico">✦</span>Designer & Developer</div>
+          <div class="hero-badge hero-badge-bottom"><span class="hero-badge-ico">🇳🇵</span>Based in Nepal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner" id="marquee">
+      <!-- filled by JS, duplicated for seamless loop -->
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="sec-head rv">
+        <div>
+          <div class="sec-eyebrow">What I Do</div>
+          <h2 class="sec-title">Services <span class="accent">&</span><br>Expertise</h2>
+        </div>
+      </div>
+      <div class="srv-grid rv rv-d1" id="services-grid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section style="padding-top:0;padding-bottom:0;">
+    <div class="nums-strip rv">
+      <div class="nums-inner">
+        <div class="sec-eyebrow" style="background:rgba(255,182,39,.18);">By The Numbers</div>
+        <h2 class="sec-title" style="color:#fff;">Results That <span class="accent">Speak</span></h2>
+        <div class="nums-grid" style="margin-top:30px;">
+          <div class="num-card"><div class="num-big" data-count="48">0</div><div class="num-label">Projects Completed</div></div>
+          <div class="num-card"><div class="num-big" data-count="24">0</div><div class="num-label">Happy Clients</div></div>
+          <div class="num-card"><div class="num-big" id="num-earned">$2.5k</div><div class="num-label">Earned So Far</div></div>
+          <div class="num-card"><div class="num-big">24h</div><div class="num-label">Avg. Delivery</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="container">
+      <div class="sec-head rv">
+        <div>
+          <div class="sec-eyebrow">Portfolio</div>
+          <h2 class="sec-title">Recent <span class="accent">Work</span></h2>
+        </div>
+        <a href="#contact" class="btn-ghost">Get in Touch →</a>
+      </div>
+      <div class="work-filters rv rv-d1" id="work-filters">
+        <button class="wf-btn active" data-cat="all">All</button>
+        <button class="wf-btn" data-cat="thumbnail">Thumbnails</button>
+        <button class="wf-btn" data-cat="logo">Logo</button>
+        <button class="wf-btn" data-cat="web">Web</button>
+        <button class="wf-btn" data-cat="poster">Poster</button>
+        <button class="wf-btn" data-cat="creative">Creative</button>
+      </div>
+      <div class="work-grid rv rv-d2" id="work-grid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lb" role="dialog" aria-modal="true" aria-label="Project image viewer">
+    <button id="lb-close" onclick="closeLb()" aria-label="Close">✕</button>
+    <button class="lb-nav" id="lb-prev" onclick="lbNav(-1)" aria-label="Previous image">←</button>
+    <button class="lb-nav" id="lb-next" onclick="lbNav(1)" aria-label="Next image">→</button>
+    <img id="lb-img" src="" alt="">
+    <div id="lb-caption"></div>
+  </div>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="sec-eyebrow rv">How I Work</div>
+      <h2 class="sec-title rv">My Process</h2>
+      <div class="proc-grid rv rv-d1">
+        <div class="proc-card"><div class="proc-step">Step 01</div><div class="proc-icon">💬</div><h3 class="proc-name">Discovery</h3><p class="proc-desc">We discuss your goals, audience, and vision. I ask the right questions to fully understand your needs.</p></div>
+        <div class="proc-card"><div class="proc-step">Step 02</div><div class="proc-icon">✏️</div><h3 class="proc-name">Design</h3><p class="proc-desc">I create initial concepts, iterating based on your feedback until it's exactly right.</p></div>
+        <div class="proc-card"><div class="proc-step">Step 03</div><div class="proc-icon">⚡</div><h3 class="proc-name">Build & Refine</h3><p class="proc-desc">Designs come to life with clean code or polished final files, refining every detail.</p></div>
+        <div class="proc-card"><div class="proc-step">Step 04</div><div class="proc-icon">🚀</div><h3 class="proc-name">Deliver</h3><p class="proc-desc">Final deliverables with full source files and rights. Fast, professional, and complete.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-frame rv">
+          <div class="about-photo-blob" aria-hidden="true"></div>
+          <div class="about-photo">
+            <img src="/images/mphoto.jpg" alt="Pradip Mishra" id="about-photo" onerror="this.style.display='none';document.getElementById('about-fallback').style.display='flex'">
+            <div class="about-fallback" id="about-fallback">🧑‍💻</div>
+          </div>
+          <div class="about-tag">BCA Student</div>
+        </div>
+        <div class="rv rv-d1">
+          <div class="sec-eyebrow">About Me</div>
+          <h2 class="sec-title">Pradip<br>Mishra</h2>
+          <div class="about-text" id="about-text" style="margin-top:30px;">
+            <p>I'm a <strong>graphic designer and web developer</strong> based in Nepal with 2+ years of freelance experience.</p>
+          </div>
+          <ul class="about-list">
+            <li>Based in Nepal 🇳🇵</li>
+            <li>BCA Student</li>
+            <li>2+ Years Freelancing Experience</li>
+            <li>30+ Projects Completed</li>
+            <li>Fast delivery with revisions</li>
+            <li>Available for remote work worldwide</li>
+          </ul>
+          <a href="#" id="about-whatsapp" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-eyebrow rv">Expertise</div>
+      <h2 class="sec-title rv">Skills <span class="accent">&</span><br>Tools</h2>
+      <div class="skills-layout" style="margin-top:60px;">
+        <div class="rv">
+          <div class="sk-meters-title">Tools I Use Daily</div>
+          <div class="sk-meters" id="sk-meters">
+            <div class="sk-meter">
+              <div class="sk-ring">
+                <svg width="88" height="88" viewBox="0 0 88 88">
+                  <circle class="sk-ring-bg" cx="44" cy="44" r="38"></circle>
+                  <circle class="sk-ring-fill" cx="44" cy="44" r="38" data-pct="92" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
+                <div class="sk-ring-pct">92%</div>
+              </div>
+              <div class="sk-meter-name">Photoshop</div>
+            </div>
+            <div class="sk-meter">
+              <div class="sk-ring">
+                <svg width="88" height="88" viewBox="0 0 88 88">
+                  <circle class="sk-ring-bg" cx="44" cy="44" r="38"></circle>
+                  <circle class="sk-ring-fill" cx="44" cy="44" r="38" data-pct="85" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
+                <div class="sk-ring-pct">85%</div>
+              </div>
+              <div class="sk-meter-name">Illustrator</div>
+            </div>
+            <div class="sk-meter">
+              <div class="sk-ring">
+                <svg width="88" height="88" viewBox="0 0 88 88">
+                  <circle class="sk-ring-bg" cx="44" cy="44" r="38"></circle>
+                  <circle class="sk-ring-fill" cx="44" cy="44" r="38" data-pct="80" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
+                <div class="sk-ring-pct">80%</div>
+              </div>
+              <div class="sk-meter-name">Figma</div>
+            </div>
+            <div class="sk-meter">
+              <div class="sk-ring">
+                <svg width="88" height="88" viewBox="0 0 88 88">
+                  <circle class="sk-ring-bg" cx="44" cy="44" r="38"></circle>
+                  <circle class="sk-ring-fill" cx="44" cy="44" r="38" data-pct="78" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
+                <div class="sk-ring-pct">78%</div>
+              </div>
+              <div class="sk-meter-name">HTML/CSS/JS</div>
+            </div>
+            <div class="sk-meter">
+              <div class="sk-ring">
+                <svg width="88" height="88" viewBox="0 0 88 88">
+                  <circle class="sk-ring-bg" cx="44" cy="44" r="38"></circle>
+                  <circle class="sk-ring-fill" cx="44" cy="44" r="38" data-pct="70" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
+                <div class="sk-ring-pct">70%</div>
+              </div>
+              <div class="sk-meter-name">After Effects</div>
+            </div>
+            <div class="sk-meter">
+              <div class="sk-ring">
+                <svg width="88" height="88" viewBox="0 0 88 88">
+                  <circle class="sk-ring-bg" cx="44" cy="44" r="38"></circle>
+                  <circle class="sk-ring-fill" cx="44" cy="44" r="38" data-pct="95" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                </svg>
+                <div class="sk-ring-pct">95%</div>
+              </div>
+              <div class="sk-meter-name">Canva Pro</div>
+            </div>
+          </div>
+        </div>
+        <div class="tools-grid rv rv-d1">
+          <div class="tool-box"><div class="tool-ico">🎨</div><div class="tool-name">Photoshop</div><div class="tool-lvl">Advanced</div></div>
+          <div class="tool-box"><div class="tool-ico">✦</div><div class="tool-name">Illustrator</div><div class="tool-lvl">Advanced</div></div>
+          <div class="tool-box"><div class="tool-ico">⬡</div><div class="tool-name">Figma</div><div class="tool-lvl">Intermediate</div></div>
+          <div class="tool-box"><div class="tool-ico">💻</div><div class="tool-name">VS Code</div><div class="tool-lvl">Intermediate</div></div>
+          <div class="tool-box"><div class="tool-ico">🎬</div><div class="tool-name">After Effects</div><div class="tool-lvl">Intermediate</div></div>
+          <div class="tool-box"><div class="tool-ico">🖌️</div><div class="tool-name">Canva Pro</div><div class="tool-lvl">Expert</div></div>
+        </div>
+      </div>
+      <div class="rv" style="margin-top:70px;">
+        <div class="timeline-title">My Journey</div>
+        <div class="tl-items">
+          <div class="tl-item"><div class="tl-year">2023</div><h4>Started Freelancing</h4><p>Began logo and thumbnail projects. First $100 earned online.</p></div>
+          <div class="tl-item"><div class="tl-year">2024</div><h4>Grew to 20+ Clients</h4><p>Expanded into web design, posters and motion graphics. Reached $1k milestone.</p></div>
+          <div class="tl-item"><div class="tl-year">2025</div><h4>45+ Projects & $2.5k+ Earned</h4><p>BCA student. Serving clients worldwide with full design & dev solutions.</p></div>
+          <div class="tl-item tl-future"><div class="tl-year">2026+</div><h4>Building Bigger</h4><p>Scaling freelance work while completing BCA degree.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="sec-eyebrow rv">Packages</div>
+      <h2 class="sec-title rv">Pricing</h2>
+      <p class="sec-sub rv">Simple, transparent pricing. No hidden fees — just great work.</p>
+      <div class="pricing-grid rv rv-d1" id="pricing-grid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="sec-eyebrow rv">Questions</div>
+      <h2 class="sec-title rv">FAQ</h2>
+      <div class="faq-list rv rv-d1" style="margin-top:50px;">
+        <div class="faq-item"><div class="faq-q" data-faq-toggle>How fast can you deliver a logo?<span class="faq-icon">+</span></div><div class="faq-a">For a standard logo, I typically deliver within 24–48 hours. Rush delivery available if needed!</div></div>
+        <div class="faq-item"><div class="faq-q" data-faq-toggle>Do you offer revisions?<span class="faq-icon">+</span></div><div class="faq-a">Yes! Starter includes 2, Standard includes 5, and Premium comes with unlimited revisions until you're 100% satisfied.</div></div>
+        <div class="faq-item"><div class="faq-q" data-faq-toggle>What file formats do you provide?<span class="faq-icon">+</span></div><div class="faq-a">PNG, JPG, SVG, PDF, and AI/PSD source files. For websites, you get all source code plus assets.</div></div>
+        <div class="faq-item"><div class="faq-q" data-faq-toggle>Can you work with my existing brand?<span class="faq-icon">+</span></div><div class="faq-a">Yes! I'll work within your existing brand identity to create something that fits seamlessly.</div></div>
+        <div class="faq-item"><div class="faq-q" data-faq-toggle>How does payment work?<span class="faq-icon">+</span></div><div class="faq-a">Bank transfer, eSewa, or international payment methods. Typically 50% upfront and 50% on delivery.</div></div>
+        <div class="faq-item"><div class="faq-q" data-faq-toggle>Can I see more of your work?<span class="faq-icon">+</span></div><div class="faq-a">Of course! Check out my Instagram and GitHub, or contact me to see more examples relevant to your project.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="sec-head rv">
+        <div>
+          <div class="sec-eyebrow">Testimonials</div>
+          <h2 class="sec-title">What Clients <span class="accent">Say</span></h2>
+        </div>
+        <button id="open-review-modal" class="btn-ghost">⭐ Leave a Review</button>
+      </div>
+      <div class="reviews-track rv rv-d1" id="reviews-grid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-eyebrow rv">Get In Touch</div>
+      <h2 class="sec-title rv">Let's Work <span class="accent">Together</span></h2>
+      <div class="rv" style="margin-top:24px;">
+        <button id="open-brief-modal" class="btn-primary">✍️ Generate AI Brief</button>
+      </div>
+      <div class="contact-split rv rv-d1">
+        <div>
+          <a href="#" id="contact-email" class="contact-email">business.tetsuo@gmail.com</a>
+          <div class="c-info-item"><div class="c-info-label">WhatsApp</div><div class="c-info-val"><a href="#" id="contact-whatsapp" target="_blank" rel="noopener">+977 9843122166</a></div></div>
+          <div class="c-info-item"><div class="c-info-label">Location</div><div class="c-info-val">Nepal 🇳🇵 — Available worldwide</div></div>
+          <div class="c-info-item"><div class="c-info-label">Response Time</div><div class="c-info-val">Within 24 hours ⚡</div></div>
+          <div class="c-info-item">
+            <div class="c-info-label">Find Me On</div>
+            <div class="socials" id="socials-list"><!-- filled by JS --></div>
+          </div>
+        </div>
+        <div>
+          <div class="form-success" id="form-success">
+            <h4>Message Sent!</h4>
+            <p>Pradip will reply within 24 hours.</p>
+          </div>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <form id="contact-form" novalidate>
+            <label class="form-lbl" for="fn">Your Name</label>
+            <input type="text" class="form-inp" placeholder="Your full name" id="fn" name="name" required maxlength="150">
+            <label class="form-lbl" for="fe">Email Address</label>
+            <input type="email" class="form-inp" placeholder="your@email.com" id="fe" name="email" required maxlength="150">
+            <label class="form-lbl" for="fs">Service Needed</label>
+            <input type="text" class="form-inp" placeholder="Logo / Website / Thumbnail / Poster..." id="fs" name="service" maxlength="150">
+            <label class="form-lbl" for="fm">Your Message</label>
+            <textarea class="form-ta" placeholder="Tell me about your project, budget and deadline..." id="fm" name="message" required maxlength="3000"></textarea>
+            <button type="submit" class="form-submit" id="form-submit-btn">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- BRIEF MODAL -->
+<div id="brief-modal" class="modal-overlay">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="brief-modal-title">
+    <button class="modal-close" data-close-modal="brief-modal" aria-label="Close">✕</button>
+    <h2 id="brief-modal-title">✍️ AI Project Brief</h2>
+    <p class="modal-sub">Fill in your details and AI will generate a professional brief instantly.</p>
+    <p class="modal-error" id="brief-error"></p>
+    <div class="brief-row">
+      <div class="brief-field"><label for="b-name">Your Name</label><input type="text" id="b-name" placeholder="John Doe" maxlength="150"></div>
+      <div class="brief-field"><label for="b-email">Your Email</label><input type="email" id="b-email" placeholder="john@example.com" maxlength="150"></div>
+    </div>
+    <div class="brief-field"><label for="b-service">Service Needed</label><select id="b-service"><option value="">Select a service...</option><option>YouTube Thumbnail</option><option>Logo & Brand Identity</option><option>Website Design & Development</option><option>Poster / Social Media Graphics</option><option>Motion Graphics</option><option>Complete Brand Package</option></select></div>
+    <div class="brief-row">
+      <div class="brief-field"><label for="b-budget">Budget (USD)</label><select id="b-budget"><option>$15 – $30</option><option>$30 – $50</option><option>$50 – $100</option><option>$100 – $200</option><option>$200+</option></select></div>
+      <div class="brief-field"><label for="b-deadline">Deadline</label><select id="b-deadline"><option>24 hours</option><option>2–3 days</option><option>1 week</option><option>2 weeks</option><option>No rush</option></select></div>
+    </div>
+    <div class="brief-field"><label for="b-desc">Describe Your Project</label><textarea id="b-desc" placeholder="Brand, style preferences, target audience, color ideas..." maxlength="1500"></textarea></div>
+    <button class="brief-generate" id="brief-btn">✨ Generate Professional Brief</button>
+    <div class="brief-result" id="brief-result"></div>
+    <div class="brief-actions" id="brief-actions">
+      <button class="brief-copy" id="brief-copy-btn">📋 Copy Brief</button>
+      <button class="brief-send" id="brief-send-btn">💬 Send via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEW MODAL -->
+<div id="review-modal" class="modal-overlay">
+  <div class="modal-box" style="max-width:480px;" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
+    <button class="modal-close" data-close-modal="review-modal" aria-label="Close">✕</button>
+    <div id="review-form-wrap">
+      <h2 id="review-modal-title">⭐ Leave a Review</h2>
+      <p class="modal-sub">Worked with Pradip? Share your experience. Reviews are checked before going live.</p>
+      <p class="modal-error" id="review-error"></p>
+      <div class="star-picker" id="star-picker" role="radiogroup" aria-label="Star rating">
+        <span data-star="1" role="radio" aria-checked="false" tabindex="0">⭐</span>
+        <span data-star="2" role="radio" aria-checked="false" tabindex="0">⭐</span>
+        <span data-star="3" role="radio" aria-checked="false" tabindex="0">⭐</span>
+        <span data-star="4" role="radio" aria-checked="false" tabindex="0">⭐</span>
+        <span data-star="5" role="radio" aria-checked="false" tabindex="0">⭐</span>
+      </div>
+      <div class="review-field"><label for="rv-name">Your Name</label><input type="text" id="rv-name" placeholder="Your full name" maxlength="100"></div>
+      <div class="review-field"><label for="rv-role">Your Role / Company</label><input type="text" id="rv-role" placeholder="e.g. YouTuber, Business Owner..." maxlength="100"></div>
+      <div class="review-field"><label for="rv-text">Your Review</label><textarea id="rv-text" placeholder="Tell others about your experience..." maxlength="1000"></textarea></div>
+      <button class="review-submit" id="review-submit-btn">Submit Review →</button>
+    </div>
+    <div class="review-success" id="review-success">
+      <div class="big-check">🎉</div>
+      <h3>Thank you!</h3>
+      <p>Your review will appear once it's been checked.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-brand">Pradip Mishra</div>
+    <div class="ft-copy">© 2026 Pradip Mishra — Designer & Developer</div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/assistant.js"></script>
+</body>
+</html>

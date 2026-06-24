@@ -1,0 +1,23 @@
+{
+  "name": "pradip-portfolio",
+  "version": "1.0.0",
+  "description": "Pradip Mishra portfolio with admin panel and AI assistant",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.4.5",
+    "express-rate-limit": "^7.4.0",
+    "cookie-parser": "^1.4.6",
+    "sharp": "^0.33.5"
+  }
+}

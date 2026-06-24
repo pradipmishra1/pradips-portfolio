@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Pradip Mishra Portfolio</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen" class="login-screen">
+  <form id="login-form" class="login-box" novalidate>
+    <div class="login-mark">PM</div>
+    <h1>Admin Panel</h1>
+    <p class="login-sub">Sign in to manage your portfolio</p>
+    <p class="login-error" id="login-error" role="alert"></p>
+    <label for="login-username">Username</label>
+    <input type="text" id="login-username" autocomplete="username" required>
+    <label for="login-password">Password</label>
+    <input type="password" id="login-password" autocomplete="current-password" required>
+    <button type="submit" id="login-btn">Sign In →</button>
+    <a href="/" class="login-back">← Back to site</a>
+  </form>
+</div>
+
+<!-- DASHBOARD (hidden until authenticated) -->
+<div id="dashboard" class="dashboard" hidden>
+  <aside class="sidebar">
+    <div class="sb-brand">PM <span>Admin</span></div>
+    <nav class="sb-nav">
+      <button class="sb-link active" data-panel="overview">Overview</button>
+      <button class="sb-link" data-panel="projects">Portfolio Work</button>
+      <button class="sb-link" data-panel="services">Services</button>
+      <button class="sb-link" data-panel="pricing">Pricing</button>
+      <button class="sb-link" data-panel="reviews">Reviews</button>
+      <button class="sb-link" data-panel="messages">Messages</button>
+      <button class="sb-link" data-panel="settings">Site Settings</button>
+    </nav>
+    <div class="sb-foot">
+      <a href="/" target="_blank" class="sb-view-site">View Live Site ↗</a>
+      <button id="logout-btn" class="sb-logout">Log Out</button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <!-- OVERVIEW -->
+    <section class="panel active" id="panel-overview">
+      <h2>Overview</h2>
+      <p class="panel-sub">A quick look at your portfolio's activity.</p>
+      <div class="stat-grid" id="stat-grid">
+        <div class="stat-card"><div class="stat-num" id="stat-projects">—</div><div class="stat-lbl">Portfolio Items</div></div>
+        <div class="stat-card"><div class="stat-num" id="stat-pending-reviews">—</div><div class="stat-lbl">Reviews Awaiting Approval</div></div>
+        <div class="stat-card"><div class="stat-num" id="stat-total-reviews">—</div><div class="stat-lbl">Total Reviews</div></div>
+        <div class="stat-card"><div class="stat-num" id="stat-unread">—</div><div class="stat-lbl">Unread Messages</div></div>
+      </div>
+      <div class="overview-tips">
+        <h3>Quick tips</h3>
+        <ul>
+          <li>Add your real project photos under <strong>Portfolio Work</strong> — images are automatically compressed so the site stays fast.</li>
+          <li>New reviews need approval under <strong>Reviews</strong> before they appear on the public site.</li>
+          <li>Contact form submissions and AI chat leads land under <strong>Messages</strong>.</li>
+          <li>Update your bio, social links, and stats anytime under <strong>Site Settings</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="panel" id="panel-projects">
+      <div class="panel-head">
+        <div><h2>Portfolio Work</h2><p class="panel-sub">Add, edit, or remove the projects shown in your Work section.</p></div>
+        <button class="btn-add" id="add-project-btn">+ Add Project</button>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="projects-table">
+          <thead><tr><th>Image</th><th>Title</th><th>Category</th><th>Order</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="panel" id="panel-services">
+      <div class="panel-head">
+        <div><h2>Services</h2><p class="panel-sub">The service cards shown on your homepage.</p></div>
+        <button class="btn-add" id="add-service-btn">+ Add Service</button>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="services-table">
+          <thead><tr><th>Icon</th><th>Title</th><th>Tags</th><th>Order</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="panel" id="panel-pricing">
+      <div class="panel-head">
+        <div><h2>Pricing Plans</h2><p class="panel-sub">Your pricing cards.</p></div>
+        <button class="btn-add" id="add-pricing-btn">+ Add Plan</button>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="pricing-table">
+          <thead><tr><th>Name</th><th>Price</th><th>Featured</th><th>Order</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="panel" id="panel-reviews">
+      <h2>Reviews</h2>
+      <p class="panel-sub">New reviews need approval before they show publicly.</p>
+      <div class="review-tabs">
+        <button class="rv-tab active" data-status="pending">Pending</button>
+        <button class="rv-tab" data-status="approved">Approved</button>
+        <button class="rv-tab" data-status="all">All</button>
+      </div>
+      <div class="cards-list" id="reviews-list"></div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section class="panel" id="panel-messages">
+      <h2>Messages</h2>
+      <p class="panel-sub">Contact form submissions and leads from the AI assistant.</p>
+      <div class="cards-list" id="messages-list"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="panel" id="panel-settings">
+      <h2>Site Settings</h2>
+      <p class="panel-sub">Update the text and links shown across your site.</p>
+      <form id="settings-form" class="settings-form">
+        <div class="form-group">
+          <h3>Hero Section</h3>
+          <label>Subheading text<textarea name="hero_desc" rows="3"></textarea></label>
+        </div>
+        <div class="form-group">
+          <h3>Stats</h3>
+          <div class="form-row">
+            <label>Projects completed<input type="text" name="stat_projects"></label>
+            <label>Happy clients<input type="text" name="stat_clients"></label>
+            <label>Total earned<input type="text" name="stat_earned"></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <h3>About Section</h3>
+          <label>Bio text (separate paragraphs with a blank line)<textarea name="about_text" rows="6"></textarea></label>
+        </div>
+        <div class="form-group">
+          <h3>Contact Info</h3>
+          <div class="form-row">
+            <label>Email<input type="email" name="email"></label>
+            <label>WhatsApp number (digits only, with country code)<input type="text" name="whatsapp" placeholder="9779843122166"></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <h3>Social Links</h3>
+          <div class="form-row">
+            <label>Instagram URL<input type="text" name="instagram"></label>
+            <label>Facebook URL<input type="text" name="facebook"></label>
+          </div>
+          <div class="form-row">
+            <label>GitHub URL<input type="text" name="github"></label>
+            <label>Telegram URL<input type="text" name="telegram"></label>
+          </div>
+        </div>
+        <p class="save-msg" id="settings-saved">Saved ✓</p>
+        <button type="submit" class="btn-save">Save Settings</button>
+      </form>
+    </section>
+  </main>
+</div>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="project-modal">
+  <div class="modal-box">
+    <button class="modal-close" data-close="project-modal">✕</button>
+    <h3 id="project-modal-title">Add Project</h3>
+    <form id="project-form">
+      <input type="hidden" id="project-id">
+      <label>Title<input type="text" id="project-title" required maxlength="150"></label>
+      <label>Category
+        <select id="project-category">
+          <option value="thumbnail">Thumbnail</option>
+          <option value="logo">Logo</option>
+          <option value="web">Web</option>
+          <option value="poster">Poster</option>
+          <option value="creative">Creative</option>
+        </select>
+      </label>
+      <label>Description<textarea id="project-description" rows="3" maxlength="500"></textarea></label>
+      <label>Display order (lower shows first)<input type="number" id="project-order" value="0"></label>
+      <label>Image<input type="file" id="project-image" accept="image/jpeg,image/png,image/webp"></label>
+      <div id="project-current-img"></div>
+      <p class="modal-error" id="project-error"></p>
+      <button type="submit" class="btn-save" id="project-save-btn">Save Project</button>
+    </form>
+  </div>
+</div>
+
+<!-- SERVICE MODAL -->
+<div class="modal-overlay" id="service-modal">
+  <div class="modal-box">
+    <button class="modal-close" data-close="service-modal">✕</button>
+    <h3 id="service-modal-title">Add Service</h3>
+    <form id="service-form">
+      <input type="hidden" id="service-id">
+      <label>Title<input type="text" id="service-title" required maxlength="150"></label>
+      <label>Icon (emoji)<input type="text" id="service-icon" maxlength="10" placeholder="✦"></label>
+      <label>Description<textarea id="service-description" rows="3" maxlength="400"></textarea></label>
+      <label>Tags (comma separated)<input type="text" id="service-tags" placeholder="Photoshop, Branding"></label>
+      <label>Display order<input type="number" id="service-order" value="0"></label>
+      <p class="modal-error" id="service-error"></p>
+      <button type="submit" class="btn-save" id="service-save-btn">Save Service</button>
+    </form>
+  </div>
+</div>
+
+<!-- PRICING MODAL -->
+<div class="modal-overlay" id="pricing-modal">
+  <div class="modal-box">
+    <button class="modal-close" data-close="pricing-modal">✕</button>
+    <h3 id="pricing-modal-title">Add Pricing Plan</h3>
+    <form id="pricing-form">
+      <input type="hidden" id="pricing-id">
+      <label>Plan name<input type="text" id="pricing-name" required maxlength="80"></label>
+      <label>Price (e.g. $50)<input type="text" id="pricing-price" required maxlength="30"></label>
+      <label>Tagline<input type="text" id="pricing-tagline" maxlength="150"></label>
+      <label>Features (one per line)<textarea id="pricing-features" rows="6"></textarea></label>
+      <label class="checkbox-row"><input type="checkbox" id="pricing-featured"> Mark as "Most Popular"</label>
+      <label>Display order<input type="number" id="pricing-order" value="0"></label>
+      <p class="modal-error" id="pricing-error"></p>
+      <button type="submit" class="btn-save" id="pricing-save-btn">Save Plan</button>
+    </form>
+  </div>
+</div>
+
+<script src="/admin/js/admin.js"></script>
+</body>
+</html>
